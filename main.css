@@ -1,0 +1,37 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    background-color: #000;
+}
+
+.slider {
+    height: 100%;
+    width: 100%;
+}
+
+.slide__layer {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    will-change: transform;
+}
+.slide__layer::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    box-shadow: inset 0 0 150px rgba(0, 0, 0, 0.8);
+    z-index: 10;
+}
+.swiper-slide {
+    overflow: hidden;
+}
+
+.swiper-wrapper {
+    will-change: transform;
+}
